@@ -1,4 +1,3 @@
-import time
 def addcode(times,timespassed):
     msg1 = ""
     for i in range(int(times)):
@@ -16,13 +15,10 @@ def runner(times,splitfreq):
         msg2 += addcode(times/splitfreq,i)
     return msg2
 
-def main():
+def main(path):
     msg = "x = int(input('> '))\n" + f"if x == {0}:\n" + f'    print("even")\n'
     msg += runner(10000000, 500000) #input yo shid here cro (amounttocreate,splitamt)
-    with open("oddeven.py","w") as file:
+    with open(path,"w") as file:
         file.write(msg)
-time1 = time.time()
-main()
-time2 = time.time()
 
-print(time2-time1)
+main("/home/example.py") # input the file to be donated with if statements
