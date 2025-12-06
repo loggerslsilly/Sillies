@@ -2,7 +2,6 @@
 #include <fstream>
 // This is the final* version. There was literally 0 need for me to make this. Have fun :3
 void createfile(int amount, std::string path){
-    char inversecomma = '"';
     std::ofstream file(path);
     
     file << "x = int(input('> '))\n";
